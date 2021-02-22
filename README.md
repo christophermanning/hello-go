@@ -1,5 +1,5 @@
 # hello-go1.16
-Testing Golang 1.16 Features
+Testing [Golang 1.16](https://golang.org/doc/go1.16) Features
 
 ## Running
 `go run main.go`
