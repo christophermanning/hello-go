@@ -9,14 +9,17 @@ import (
 	"os"
 	"time"
 
-	"github.com/christophermanning/hello-go1.16/embed"
-	"github.com/christophermanning/hello-go1.16/filesystem"
+	"github.com/christophermanning/hello-go/go1.16/embed"
+	"github.com/christophermanning/hello-go/go1.16/filesystem"
+	"github.com/christophermanning/hello-go/go1.16/util"
 )
 
 var portFlag = flag.Int("p", 8000, "port")
 
 func main() {
 	flag.Parse()
+
+	util.ForLoopWithShared()
 
 	html := embed.New()
 
@@ -57,5 +60,6 @@ func main() {
 		fmt.Fprintln(w, count)
 	})
 
+	fmt.Printf("Listening on %d\n", *portFlag)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", *portFlag), nil))
 }

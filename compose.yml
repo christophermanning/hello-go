@@ -1,0 +1,15 @@
+services:
+  go1.16:
+    build: go1.16/.
+    volumes:
+      - ./go1.16:/go/src/github.com/christophermanning/hello-go/go1.16
+      - ./util:/go/src/github.com/christophermanning/hello-go/go1.16/util
+    command: go run main.go
+    ports:
+      - 8000:8000
+  go1.22:
+    build: go1.22/.
+    volumes:
+      - ./go1.22:/go/src/github.com/christophermanning/hello-go/go1.22
+      - ./util:/go/src/github.com/christophermanning/hello-go/go1.22/util
+    command: go run main.go
