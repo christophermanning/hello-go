@@ -13,3 +13,8 @@ services:
       - ./go1.22:/go/src/github.com/christophermanning/hello-go/go1.22
       - ./util:/go/src/github.com/christophermanning/hello-go/go1.22/util
     command: go run main.go
+  go1.23:
+    build: go1.23/.
+    volumes:
+      - ./go1.23:/go/src/github.com/christophermanning/hello-go/go1.23
+    command: go run main.go
