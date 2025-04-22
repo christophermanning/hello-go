@@ -5,6 +5,8 @@ Testing various new features in versions of [Go](https://go.dev/).
  - `docker-compose up` to start containers for versions
 
 ## Versions
+ - [go1.24](https://go.dev/doc/go1.24)
+   - [os.Root isolates filesystem operations to a single directory parent](https://go.dev/blog/go1.24#standard-library-additions) :bricks:
  - [go1.23](https://go.dev/doc/go1.23)
    - [slices package now has Sort and other functions that work with iterators](https://go.dev/doc/go1.23#iterators) :twisted_rightwards_arrows:
  - [go1.22](https://go.dev/doc/go1.22)
